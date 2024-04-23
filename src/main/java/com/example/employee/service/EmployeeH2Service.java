@@ -52,7 +52,6 @@ public class EmployeeH2Service implements EmployeeRepository {
     public Employee updateEmployee(int employeeId, Employee employee) {
         if (employee.getEmployeeName() != null) {
             db.update("UPDATE EMPLOYEELIST SET employeeName = ? WHERE employeeId = ?", employee.getEmployeeName(), employeeId);
-    
 
         }
         if (employee.getEmail() != null) {
@@ -64,7 +63,6 @@ public class EmployeeH2Service implements EmployeeRepository {
 
         }
         return getEmployeeById(employeeId);
-        
 
     }
 
